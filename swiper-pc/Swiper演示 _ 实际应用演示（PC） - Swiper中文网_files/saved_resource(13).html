@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)https://www.swiper.com.cn/demo/kalendae/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Swiper中文网的日期选择器</title>
+<link rel="stylesheet" href="./style.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="./kalendae.css" type="text/css" charset="utf-8">
+<script src="./jquery-1.7.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./moment.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./kalendae.min.js.下载" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<section id="content-show">
+<div class="left time-select titleleft">
+<div class="time-select-box time-select-box-today"><a href="https://www.swiper.com.cn/demo/kalendae/#" class="link">今日</a></div>
+<div class="time-select-box time-select-box-yesterday"><a href="https://www.swiper.com.cn/demo/kalendae/#" class="link">昨日</a></div>
+<div class="time-select-box time-select-box-seven"><a href="https://www.swiper.com.cn/demo/kalendae/#" class="link">最近7日</a></div>
+<div class="time-select-box time-select-box-thirty"><a href="https://www.swiper.com.cn/demo/kalendae/#" class="link">最近30日</a></div>
+<div id="time-select-box-toggle" class="time-select-box time-select-box-toggle last"><input type="text" value="2/16/2012" id="input1"> <i class="i_orderd"></i></div></div>
+
+<script type="text/javascript" charset="utf-8">
+var myDate = new Date();   
+y=myDate.getFullYear();   
+m=myDate.getMonth()+1;         
+d=myDate.getDate(); 
+today=y+'-'+m+'-'+d
+
+ var k4 = new Kalendae.Input('input1', {
+			months:2,
+			mode:'range',
+			selected:[today,today]//默认显示今天，可以通过获取url的开始结束时间或者其他方式来设定这个值
+		});
+		
+$('<div class="btnbox"><a class="k-submit" href="">确定</a></div>').appendTo(".kalendae");
+$(".k-submit").click(function(){
+	strs =$("#input1").val().split(" 至 ");
+	if(strs.length==1){strs[1]=strs[0];}
+	$(this).attr('href',"index.html?starttime="+strs[0]+"&endtime="+strs[1]);
+	});
+</script>
+
+</section><div class="kalendae k-floating" style="display: none;"><div class="k-calendar k-first-month" data-cal-index="1"><div class="k-title"><a class="k-btn-previous-year"></a><a class="k-btn-previous-month"></a><a class="k-btn-next-year"></a><a class="k-btn-next-month"></a><span class="k-caption">2019年 1月 </span></div><div class="k-header"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div><div class="k-days"><span class="k-out-of-month" data-date="2018-12-30">30</span><span class="k-out-of-month" data-date="2018-12-31">31</span><span class="k-in-month k-active" data-date="2019-01-01">1</span><span class="k-in-month k-active" data-date="2019-01-02">2</span><span class="k-in-month k-active" data-date="2019-01-03">3</span><span class="k-in-month k-active" data-date="2019-01-04">4</span><span class="k-in-month k-active" data-date="2019-01-05">5</span><span class="k-in-month k-active" data-date="2019-01-06">6</span><span class="k-in-month k-active" data-date="2019-01-07">7</span><span class="k-in-month k-active" data-date="2019-01-08">8</span><span class="k-selected k-in-month k-active k-today" data-date="2019-01-09">9</span><span class="k-in-month k-active" data-date="2019-01-10">10</span><span class="k-in-month k-active" data-date="2019-01-11">11</span><span class="k-in-month k-active" data-date="2019-01-12">12</span><span class="k-in-month k-active" data-date="2019-01-13">13</span><span class="k-in-month k-active" data-date="2019-01-14">14</span><span class="k-in-month k-active" data-date="2019-01-15">15</span><span class="k-in-month k-active" data-date="2019-01-16">16</span><span class="k-in-month k-active" data-date="2019-01-17">17</span><span class="k-in-month k-active" data-date="2019-01-18">18</span><span class="k-in-month k-active" data-date="2019-01-19">19</span><span class="k-in-month k-active" data-date="2019-01-20">20</span><span class="k-in-month k-active" data-date="2019-01-21">21</span><span class="k-in-month k-active" data-date="2019-01-22">22</span><span class="k-in-month k-active" data-date="2019-01-23">23</span><span class="k-in-month k-active" data-date="2019-01-24">24</span><span class="k-in-month k-active" data-date="2019-01-25">25</span><span class="k-in-month k-active" data-date="2019-01-26">26</span><span class="k-in-month k-active" data-date="2019-01-27">27</span><span class="k-in-month k-active" data-date="2019-01-28">28</span><span class="k-in-month k-active" data-date="2019-01-29">29</span><span class="k-in-month k-active" data-date="2019-01-30">30</span><span class="k-in-month k-active" data-date="2019-01-31">31</span><span class="k-out-of-month" data-date="2019-02-01">1</span><span class="k-out-of-month" data-date="2019-02-02">2</span><span class="k-out-of-month" data-date="2019-02-03">3</span><span class="k-out-of-month" data-date="2019-02-04">4</span><span class="k-out-of-month" data-date="2019-02-05">5</span><span class="k-out-of-month" data-date="2019-02-06">6</span><span class="k-out-of-month" data-date="2019-02-07">7</span><span class="k-out-of-month" data-date="2019-02-08">8</span><span class="k-out-of-month" data-date="2019-02-09">9</span></div></div><div class="k-calendar k-last-month" data-cal-index="0"><div class="k-title"><a class="k-btn-previous-year"></a><a class="k-btn-previous-month"></a><a class="k-btn-next-year"></a><a class="k-btn-next-month"></a><span class="k-caption">2019年 2月 </span></div><div class="k-header"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div><div class="k-days"><span class="k-out-of-month" data-date="2019-01-27">27</span><span class="k-out-of-month" data-date="2019-01-28">28</span><span class="k-out-of-month" data-date="2019-01-29">29</span><span class="k-out-of-month" data-date="2019-01-30">30</span><span class="k-out-of-month" data-date="2019-01-31">31</span><span class="k-in-month k-active" data-date="2019-02-01">1</span><span class="k-in-month k-active" data-date="2019-02-02">2</span><span class="k-in-month k-active" data-date="2019-02-03">3</span><span class="k-in-month k-active" data-date="2019-02-04">4</span><span class="k-in-month k-active" data-date="2019-02-05">5</span><span class="k-in-month k-active" data-date="2019-02-06">6</span><span class="k-in-month k-active" data-date="2019-02-07">7</span><span class="k-in-month k-active" data-date="2019-02-08">8</span><span class="k-in-month k-active" data-date="2019-02-09">9</span><span class="k-in-month k-active" data-date="2019-02-10">10</span><span class="k-in-month k-active" data-date="2019-02-11">11</span><span class="k-in-month k-active" data-date="2019-02-12">12</span><span class="k-in-month k-active" data-date="2019-02-13">13</span><span class="k-in-month k-active" data-date="2019-02-14">14</span><span class="k-in-month k-active" data-date="2019-02-15">15</span><span class="k-in-month k-active" data-date="2019-02-16">16</span><span class="k-in-month k-active" data-date="2019-02-17">17</span><span class="k-in-month k-active" data-date="2019-02-18">18</span><span class="k-in-month k-active" data-date="2019-02-19">19</span><span class="k-in-month k-active" data-date="2019-02-20">20</span><span class="k-in-month k-active" data-date="2019-02-21">21</span><span class="k-in-month k-active" data-date="2019-02-22">22</span><span class="k-in-month k-active" data-date="2019-02-23">23</span><span class="k-in-month k-active" data-date="2019-02-24">24</span><span class="k-in-month k-active" data-date="2019-02-25">25</span><span class="k-in-month k-active" data-date="2019-02-26">26</span><span class="k-in-month k-active" data-date="2019-02-27">27</span><span class="k-in-month k-active" data-date="2019-02-28">28</span><span class="k-out-of-month" data-date="2019-03-01">1</span><span class="k-out-of-month" data-date="2019-03-02">2</span><span class="k-out-of-month" data-date="2019-03-03">3</span><span class="k-out-of-month" data-date="2019-03-04">4</span><span class="k-out-of-month" data-date="2019-03-05">5</span><span class="k-out-of-month" data-date="2019-03-06">6</span><span class="k-out-of-month" data-date="2019-03-07">7</span><span class="k-out-of-month" data-date="2019-03-08">8</span><span class="k-out-of-month" data-date="2019-03-09">9</span></div></div><a class="k-btn-close"></a><div class="btnbox"><a class="k-submit" href="https://www.swiper.com.cn/demo/kalendae/">确定</a></div></div>
+
+</body></html>

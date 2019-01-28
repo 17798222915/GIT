@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+}
+html,body{
+	height:100%;
+	font: 14px/1.5 'Microsoft YaHei','微软雅黑',Helvetica,Sans-serif;
+	color:#222;
+}
+table,tr,td,thead{
+	border-collapse:collapse;border-spacing:0;
+}
+li{
+	list-style:none;
+}
+
+a{
+	color:#222;
+	text-decoration:none;
+}
+a:hover{
+	color: #459ae9;
+	text-decoration:underline;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.clear{
+	clear:both;
+	height:0px;
+	width:100%;
+	float:left;
+}
+#content-show{
+	margin:0 auto;
+	width:500px;}
+
+.time-select{
+	border: 1px solid #e6e7ec;
+	background:#fff;
+}
+.time-select .time-select-box{
+	float:left;
+}
+.time-select .time-select-box .link{
+padding:0 10px;
+text-align:center;
+height:30px;
+line-height:30px;
+float:left;
+border-right:1px solid #e6e7ec;
+}
+.time-select .last .link{
+	border-right:none;
+}
+.time-select .time-select-box a:hover{
+	color:inherit;
+}
+.time-select .time-select-box-action a{
+	color: #459ae9;
+}
+.time-select-box .array{
+	border:7px dashed transparent;
+	width:0px;
+	height:0px;
+	display:block;
+	position:absolute;
+	top:8px;
+}
+.time-select-box-pre a,.time-select-box-after a{
+	position:relative;
+	width:10px;
+}
+.time-select-box-pre .array1{
+	border-right-color:#000;
+	left:4px;
+}
+.time-select-box-pre .array2{
+	border-right-color:#fff;
+	left:5px;
+}
+.time-select-box-after .array1{
+	border-left-color:#000;
+	left:12px;
+}
+.time-select-box-after .array2{
+	border-left-color:#fff;
+	left:11px;
+}
+.time-select-box-toggle{
+	position:relative;
+}
+.time-select-box-toggle #input1{
+	border:none;
+	font:inherit;
+	width:180px;
+	height:30px;
+	line-height:30px;
+	padding:0 10px;
+	outline: none;
+}
+.time-select-box-toggle .i_orderd {
+position: relative;
+top: -2px;
+right: 5px;
+border-top: 5px solid #c6c6c6;
+display: inline-block;
+width: 0;
+height: 0;
+vertical-align: middle;
+border-right: 5px dashed transparent;
+border-left: 5px dashed transparent;
+font-size: 0;
+content: "";
+overflow: hidden;
+}
+.time-select-box-toggle:hover .i_orderd{
+	border-top: 5px solid #727272;
+}
+.time-select-box-toggle .kalendae{
+	position:absolute;
+	width:505px;
+	left:0;
+	top:35px;
+	border:1px solid #d9dadc;
+}
